@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+
+# Editor directories
+.vscode/
+.idea/
+
+# Exported user data
+coach-claude-knee.json

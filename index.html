@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coach Claude · Knee Rebuild</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand"><span class="dot"></span> Coach Claude · patellar tendon rebuild · 12 weeks</div>
+    <h1>Left Knee <span class="em">Rebuild</span></h1>
+    <p class="sub">Band &amp; bodyweight plan, runs included, marathon baked in at week 5. Log your pain and tick things off, then hit <b>Export</b> and paste the JSON back to me so I can see if we're on track.</p>
+  </header>
+
+  <div class="bar-actions">
+    <button class="act primary" onclick="openExport()">&#8593; Export for Coach Claude</button>
+    <button class="act" onclick="openImport()">&#8595; Import data</button>
+    <button class="act" onclick="resetAll()">Reset</button>
+  </div>
+
+  <div id="dashboard"></div>
+
+  <div class="howto">
+    <div class="howto-h">How to read the plan</div>
+    <p><b>3–4 × 8–12</b> means 3 to 4 sets of 8 to 12 reps. Do the reps, rest a minute or two, then repeat for 3 or 4 rounds total.</p>
+    <p><b>3s down, 3s up</b> is the tempo for each single rep: three seconds lowering, three seconds back up. Slow and controlled is the whole point with a tendon, it keeps the load steady and stops momentum doing the work for you.</p>
+    <p><b>Making it hard enough:</b> with no weights, the load comes from going single-leg, slowing the tempo, and adding range. Once an exercise feels easy for all its reps, progress it: load a backpack with books or water bottles, drop to one leg, or go deeper. Aim for the last couple of reps to feel genuinely hard but still clean, with pain no higher than 3/10. The mini loop bands add the resistance on the hip work (bridges, clamshells, lateral walks).</p>
+  </div>
+
+  <div class="weeknav" id="weeknav"></div>
+  <div class="weeknote" id="weeknote"></div>
+  <div class="daynav" id="daynav"></div>
+  <div id="weekView"></div>
+
+  <footer>
+    GENERAL TRAINING INFORMATION · <b>NOT MEDICAL ADVICE.</b> Claude is not a doctor.<br>
+    Hold the pain rule: keep it at or under 3/10, settling within 24h, not trending worse. If it climbs or lingers, scale back and check with your physio. Mild muscle soreness from strength work is fine; sharp joint pain is not.<br>
+    Exercise links open YouTube how-to searches. Your data lives in this browser and in the JSON you export.
+  </footer>
+</div>
+
+<!-- modal -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <h3 id="modalTitle">Export</h3>
+    <p id="modalDesc"></p>
+    <textarea id="modalText" spellcheck="false"></textarea>
+    <div class="mrow" id="modalBtns"></div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/plan.js"></script>
+<script src="js/state.js"></script>
+<script src="js/handlers.js"></script>
+<script src="js/render.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/data-io.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
